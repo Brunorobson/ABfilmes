@@ -4,7 +4,6 @@
         <h2 class="text-xl font-bold text-slate-200 mb-2">Explorar</h2> <!-- Adicionada margem inferior -->
 
         <form class="flex items-center border-2 border-slate-800 rounded-md bg-slate-900 px-2 mt-2"> <!-- Adicionada margem superior -->
-            <!-- Ícone de lupa -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -17,9 +16,11 @@
                 placeholder="Pesquisar..." />
         </form>
     </div>
-
     <!-- Grid dos cards -->
-    <section class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <section class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <?php foreach ($filmes as $filme){
+        require 'partials/_filme.php';
+    } ?>
+</section>
 
-    </section>
 </div>
