@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>ABFilmes</title>
 </head>
 
@@ -18,8 +20,13 @@
         <li><a href="/meus-livros">Meus Filmes</a></li>
     </ul>
 
-    <ul>
+    <ul class="flex space-x-4">
+    <?php if(!auth()): ?>
         <li><a href="/login" class="hover:underline">Fazer Login</a></li>
+    <?php else: ?>
+        <li><a href="#" class="hover:underline">Oi <?= auth()->nome ?></a></li>
+        <li><a href="/logout" class="fa-solid fa-right-from-bracket"></a></li>
+    <?php endif ?>
     </ul>
 </nav>
 
