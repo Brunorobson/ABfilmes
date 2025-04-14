@@ -16,11 +16,17 @@
                 placeholder="Pesquisar..." />
         </form>
     </div>
+    <?php if(count($filmes) == 0){
+        require'partials/_no-found.php';
+    }; ?>
     <!-- Grid dos cards -->
     <section class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
     <?php foreach ($filmes as $filme){
         require 'partials/_filme.php';
     } ?>
+
+
 </section>
+
 
 </div>

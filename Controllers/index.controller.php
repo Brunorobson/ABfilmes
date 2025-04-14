@@ -1,5 +1,5 @@
 <?php
+$pesquisa = $_REQUEST['pesquisar'] ?? '';
+$filmes = Filme::all($pesquisa);
 
-$filmes = Filme::all($_REQUEST['pesquisar'] ?? '');
-
-view('index', compact('filmes'));
+view('index', compact('filmes', 'pesquisa'));
