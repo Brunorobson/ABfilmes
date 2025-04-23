@@ -1,5 +1,6 @@
 <?php
 require '../Models/Filme.php';
+require '../Models/Usuario.php';
 session_start();
 require '../Flash.php';
 require '../functions.php';

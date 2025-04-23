@@ -17,3 +17,4 @@ class Database
         return $prepare;
     }
 }
+$database = new Database(config('database'));

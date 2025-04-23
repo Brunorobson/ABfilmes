@@ -11,27 +11,28 @@
 </head>
 
 <body class="bg-slate-950 text-slate-400">
-    <header class="bg-slate-900">
-    <nav class="mx-auto max-w-screen-lg flex justify-between items-center px-8 py-4">
-    <img src="logo.webp" alt="Logo" class="w-10 h-10" />
+    <?php if ($view !== 'login'): ?>
+        <header class="bg-slate-900">
+            <nav class="mx-auto max-w-screen-lg flex justify-between items-center px-8 py-4">
+                <img src="logo.webp" alt="Logo" class="w-10 h-10" />
 
-    <ul class="flex space-x-4 font-bold">
-        <li><a href="/" class="text-slate-500">Explorar</a></li>
-        <li><a href="/meus-livros">Meus Filmes</a></li>
-    </ul>
+                <ul class="flex space-x-4 font-bold">
+                    <li><a href="/" class="text-slate-500">Explorar</a></li>
+                    <li><a href="/meus-livros">Meus Filmes</a></li>
+                </ul>
 
-    <ul class="flex space-x-4">
-    <?php if(!auth()): ?>
-        <li><a href="/login" class="hover:underline">Fazer Login</a></li>
-    <?php else: ?>
-        <li><a href="#" class="hover:underline">Oi <?= auth()->nome ?></a></li>
-        <li><a href="/logout" class="fa-solid fa-right-from-bracket"></a></li>
-    <?php endif ?>
-    </ul>
-</nav>
+                <ul class="flex space-x-4">
+                    <?php if (!auth()): ?>
+                        <li><a href="/login" class="hover:underline">Fazer Login</a></li>
+                    <?php else: ?>
+                        <li><a href="#" class="hover:underline">Oi <?= auth()->nome ?></a></li>
+                        <li><a href="/logout" class="fa-solid fa-right-from-bracket"></a></li>
+                    <?php endif ?>
+                </ul>
+            </nav>
 
-    </header>
-
+        </header>
+    <?php endif; ?>
 
 
     <main class="mx-auto max-w-screen-lg space-y-6">
