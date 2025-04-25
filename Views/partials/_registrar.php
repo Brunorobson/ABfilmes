@@ -1,4 +1,4 @@
-<h1 class="border-b border-slate-700 text-slate-400 font-bold px-4 py-2">Crie sua Conta</h1>
+<h1 class=" text-slate-400 font-bold px-4 py-2">Crie sua Conta</h1>
         <form class="p-4 space-y-4"
             method="POST" action="/registrar">
 

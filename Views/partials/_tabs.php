@@ -1,0 +1,4 @@
+<?php
+$active = $view ?? 'login';
+?>
+

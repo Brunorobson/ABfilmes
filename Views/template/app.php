@@ -11,7 +11,7 @@
 </head>
 
 <body class="bg-slate-950 text-slate-400">
-    <?php if ($view !== 'login'): ?>
+    <?php if ($view !== 'login' && $view !== 'registrar'): ?>
         <header class="bg-slate-900">
             <nav class="mx-auto max-w-screen-lg flex justify-between items-center px-8 py-4">
                 <img src="logo.webp" alt="Logo" class="w-10 h-10" />
@@ -44,6 +44,4 @@
         <?php require "../views/{$view}.view.php" ?>
     </main>
 </body>
-
-
 </html>

@@ -1,8 +1,6 @@
 <?php
 $email = $senha = '';
 
-//dump($_SESSION);
-// 1. receber o formulario com email e senha
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
