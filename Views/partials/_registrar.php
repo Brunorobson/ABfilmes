@@ -15,18 +15,18 @@
         <?php endif ?>
 
         <div class="flex flex-col">
-        <div class="relative">
-        <i class="ph-light ph-user text-slate-400 absolute top-1/2 left-3 transform -translate-y-1/2 text-lg"></i>
+            <div class="relative">
+                <i class="ph-light ph-user text-slate-400 absolute top-1/2 left-3 transform -translate-y-1/2 text-lg"></i>
                 <input
                     type="text"
-                    name="name"
+                    name="nome"
                     placeholder="Nome Completo"
                     class="pl-10 border border-slate-800 border-[1px] rounded-md bg-slate-950 text-sm text-slate-400 focus:outline-none px-2 py-2 w-full" />
             </div>
         </div>
         <div class="flex flex-col">
-        <div class="relative">
-        <i class="ph-light ph-envelope text-slate-400 absolute top-1/2 left-3 transform -translate-y-1/2 text-lg"></i>
+            <div class="relative">
+                <i class="ph-light ph-envelope text-slate-400 absolute top-1/2 left-3 transform -translate-y-1/2 text-lg"></i>
 
                 <input
                     type="text"
@@ -37,7 +37,7 @@
         </div>
 
         <div class="flex flex-col">
-        <div class="relative">
+            <div class="relative">
                 <i class="ph-light ph-password text-slate-400 absolute top-1/2 left-3 transform -translate-y-1/2 text-lg"></i>
                 <input
                     type="password"

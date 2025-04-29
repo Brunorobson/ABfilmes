@@ -93,7 +93,6 @@
                     <?php endif ?>
                 </ul>
             </nav>
-
         </header>
 
     <?php endif; ?>
