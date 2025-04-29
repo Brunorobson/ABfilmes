@@ -2,7 +2,7 @@
 
     {{-- Avaliação no topo direito --}}
     <div class="absolute top-2 right-2 bg-slate-800 text-slate-200 text-sm px-2 py-1 rounded-full flex items-center space-x-1">
-        <span class="text-[16px] font-bold">4,5 <span class="text-[12px]">/5</span>⭐</span>
+        <span class="text-[16px] font-bold">4,5 <span class="text-[12px]">/5 <i class="ph-fill ph-star"></i></span>
     </div>
 
     {{-- Informações no rodapé --}}
