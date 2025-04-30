@@ -1,6 +1,6 @@
 <!-- Contêiner Centralizado -->
 <div class="flex items-center justify-center bg-slate-950 p-4">
-    <form class="grid grid-cols-3 gap-6 p-8  rounded-2xl w-full" method="POST" enctype="multipart/form-data">
+    <form class="grid grid-cols-3 gap-6 p-8  rounded-2xl w-full" method="POST" action="criar-filme" enctype="multipart/form-data">
 
         <!-- Coluna da Imagem (1/3) -->
         <div class="col-span-1 flex flex-col justify-center items-center border-2 border-dashed border-slate-700 rounded-xl p-6 bg-slate-800">
@@ -63,7 +63,7 @@
 
             <!-- Botões -->
             <div class="flex justify-end space-x-2 pt-4">
-                <a href="/pagina-anterior" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300">
+                <a href="/meus-filmes" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300">
                     Cancelar
                 </a>
                 <button

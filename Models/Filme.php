@@ -4,6 +4,7 @@ class Filme
 {
     public $id;
     public $titulo;
+    public $categoria;
     public $descricao;
     public $ano;
     public $usuario_id;
@@ -15,12 +16,12 @@ class Filme
         return $database->query(
             "
             select 
-            f.id, f.titulo, f.descricao, f.ano
+            f.id, f.titulo, f.descricao, f.categoria, f.ano
             from
             Filmes f
             where $where
             group by 
-            f.id, f.titulo, f.descricao, f.ano, f.usuario_id
+            f.id, f.titulo, f.descricao, f.categoria,f.ano, f.usuario_id
             ",
             Filme::class,
             $params

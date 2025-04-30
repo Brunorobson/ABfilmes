@@ -8,8 +8,8 @@
     {{-- Informações no rodapé --}}
     <div class="absolute bottom-3 left-3 text-white px-4 py-3">
         <div class="flex flex-col gap-y-1">
-            <p class="font-semibold text-lg leading-tight"><?= $filme->titulo ?></p>
-            <p class="text-[12px] text-slate-200">Drama • <?= $filme->ano ?></p>
+            <p class="font-semibold text-lg leading-tight"><a href="filme?id=<?= $filme->id ?>"><?= $filme->titulo ?></a></p>
+            <p class="text-[12px] text-slate-200"><?= $filme->categoria ?> • <?= $filme->ano ?></p>
         </div>
     </div>
 </div>
