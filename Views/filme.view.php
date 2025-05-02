@@ -6,8 +6,9 @@
 
         <!-- Coluna da Imagem (1/3) -->
         <div class="col-span-1 flex justify-center items-start">
-            <img class="p-6 bg-slate-800 rounded-xl w-full max-w-xs shadow-lg">
+            <img src="<?= $filme->imagem ?>" alt="Capa do Filme" class=" rounded-xl w-full max-w-xs shadow-lg">
         </div>
+
 
         <!-- Coluna dos Detalhes (2/3) -->
         <div class="col-span-2 flex flex-col space-y-4 text-slate-200">

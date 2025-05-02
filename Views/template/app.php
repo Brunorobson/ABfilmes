@@ -98,7 +98,7 @@
     <?php endif; ?>
 
 
-    <main class="mx-auto max-w-screen-lg space-y-6">
+    <main class="mx-auto max-w-screen-lg space-y-6 mb-8">
         <?php if ($mensagem = flash()->get('mensagem')): ?>
             <div class="bg-green-900 text-green-500 px-4 py-1 rounded-mb text-sm font-bold">
                 <?= $mensagem ?>

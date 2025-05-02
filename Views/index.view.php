@@ -13,9 +13,12 @@
                 placeholder="Pesquisar..." />
         </form>
     </div>
-    <?php if (count($filmes) == 0) {
-        require 'partials/_no-found.php';
-    }; ?>
+    <?php if (count($filmes) === 0): ?>
+        <?php require 'partials/_nenhum.php'; ?>
+    <?php elseif (count($filmes) === 0 && !empty($pesquisa)): ?>
+        <?php require 'partials/_no-found.php'; ?>
+    <?php endif; ?>
+
     <!-- Grid dos cards -->
     <section class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <?php foreach ($filmes as $filme) {
