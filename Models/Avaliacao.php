@@ -6,4 +6,6 @@ class Avaliacao
     public $filme_id;
     public $avaliacao;
     public $nota;
+
+    public $usuario_nome;
 }

@@ -13,7 +13,7 @@
 
         <!-- Coluna do Formulário (2/3) -->
         <div class="col-span-2 flex flex-col justify-center space-y-4">
-            <?php if ($validacoes = flash()->get('validacoes_login')): ?>
+            <?php if ($validacoes = flash()->get('validacoes')): ?>
                 <div class="border-red-800 bg-red-900 text-red-400 px-4 py-1 rounded border-2 text-sm font-bold">
                     <ul>
                         <li>Deu ruim!</li>
@@ -39,8 +39,9 @@
                 <div class="relative">
                     <i class="ph-light ph-calendar text-slate-400 absolute top-1/2 left-3 transform -translate-y-1/2 text-lg"></i>
                     <input
-                        type="date"
+                        type="text"
                         name="ano"
+                        placeholder="Ano"
                         class="pl-10 border border-slate-800 rounded-md bg-slate-900 text-sm text-slate-400 focus:outline-none px-2 py-2 w-full" />
                 </div>
                 <div class="relative">

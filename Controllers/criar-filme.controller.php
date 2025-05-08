@@ -39,7 +39,7 @@ $database->query(
     params: compact('titulo', 'ano', 'descricao', 'categoria', 'imagem', 'usuario_id')
 );
 
-
+view('adicionar-filme');
 flash()->push('mensagem', 'Livro cadastrado com sucesso');
 header('location: /meus-filmes');
 exit();
