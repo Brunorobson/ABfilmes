@@ -12,12 +12,32 @@
 
         <!-- Coluna dos Detalhes (2/3) -->
         <div class="col-span-2 flex flex-col space-y-4 text-slate-200">
+            <a href="<?= $_SERVER['HTTP_REFERER'] ?? '/' ?>" class="flex items-center gap-2 text-slate-300 hover:text-white">
+                <i class="ph-fill ph-arrow-left"></i>
+                <span>Voltar</span>
+            </a>
             <div class="text-3xl font-bold"><?= $filme->titulo ?></div>
             <div class="text-purple-400 font-semibold"><?= $filme->categoria ?></div>
             <div class="text-sm text-slate-400"><?= $filme->ano ?></div>
+            <div class="flex items-center gap-2 text-xs italic text-slate-300">
+                <div class="flex gap-0.5">
+                    <?php
+                    $nota = $filme->nota_avaliacao; // arredonda a média para mostrar as estrelas preenchidas
+                    for ($i = 1; $i <= 5; $i++):
+                        $classe = $i <= $nota ? 'ph-fill' : 'ph-light';
+                    ?>
+                        <i class="ph-star <?= $classe ?> text-purple-500"></i>
+                    <?php endfor; ?>
+                </div>
+                <span class="text-slate-400">
+                    <?= (int) $filme->nota_avaliacao ?> / 5 (<?= $filme->count_avaliacoes ?> Avaliações)
+                </span>
+            </div>
+
             <p class="text-sm text-slate-300 leading-relaxed">
                 <?= $filme->descricao ?>
             </p>
+
         </div>
     </div>
     <div class="w-full max-w-6xl mt-8">

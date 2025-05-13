@@ -10,6 +10,9 @@ class Filme
     public $usuario_id;
     public $imagem;
 
+    public $nota_avaliacao;
+    public $count_avaliacoes;
+
 
     public function query($where, $params)
     {
@@ -17,9 +20,12 @@ class Filme
         return $database->query(
             "
             select 
-            f.id, f.titulo, f.descricao, f.categoria, f.ano, f.imagem
+            f.id, f.titulo, f.descricao, f.categoria, f.ano, f.imagem,
+            round(AVG(a.nota)) as nota_avaliacao, 
+            count(a.id) as count_avaliacoes
             from
-            Filmes f
+            filmes f
+            left join avaliacoes a on a.filme_id = f.id
             where $where
             group by 
             f.id, f.titulo, f.descricao, f.categoria,f.ano, f.usuario_id, f.imagem

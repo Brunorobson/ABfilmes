@@ -19,6 +19,7 @@
         <?php require 'partials/_no-found.php'; ?>
     <?php endif; ?>
 
+
     <!-- Grid dos cards -->
     <section class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <?php foreach ($filmes as $filme) {
