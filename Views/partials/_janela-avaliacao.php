@@ -29,9 +29,9 @@
 
             <!-- Dados do filme + Estrelas -->
             <div class="col-span-2 space-y-1">
-                <h3 class="text-lg font-semibold text-slate-100">Título do Filme</h3>
-                <p class="text-sm text-slate-400">Categoria: <span class="font-medium">Ação</span></p>
-                <p class="text-sm text-slate-400">Ano: <span class="font-medium">2024</span></p>
+                <h3 class="text-lg font-semibold text-slate-100"><?= $filme->titulo ?></h3>
+                <p class="text-sm text-slate-400">Categoria: <span class="font-medium"><?= $filme->categoria ?></span></p>
+                <p class="text-sm text-slate-400">Ano: <span class="font-medium"><?= $filme->ano ?></span></p>
 
                 <!-- Formulário -->
                 <form action="/criar-avaliacao" method="POST" class="space-y-4">

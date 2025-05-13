@@ -13,6 +13,10 @@
     </div>
 </div>
 
+<?php if (count($avaliacoes) == 0): ?>
+    <?php require '_no-avaliacao.php'; ?>
+<?php endif; ?>
+
 <!-- Inclui o modal -->
 <?php require '_janela-avaliacao.php'; ?>
 

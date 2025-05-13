@@ -45,6 +45,17 @@
 </head>
 
 <body class="bg-slate-950 text-slate-400">
+
+    <?php
+    $usuarioNome = auth();
+    $hash = md5($usuarioNome);
+    $cor = '#' . substr($hash, 0, 6);
+
+    $partes = explode(' ', $usuarioNome);
+    $iniciais = strtoupper(substr($partes[0], 0, 1) . (isset($partes[1]) ? substr($partes[count($partes) - 1], 0, 1) : ''));
+    ?>
+
+
     <?php if ($view !== 'login' && $view !== 'registrar'): ?>
         <header>
             <nav class="mx-auto max-w-screen-lg flex justify-between items-center px-8 py-4">
@@ -82,7 +93,11 @@
                     <?php else: ?>
                         <li>
                             <a href="#" class="inline-flex items-center gap-2 px-4 py-2 h-10 rounded-md text-slate-500 hover:bg-slate-800 hover:text-purple-400 transition-colors">
-                                Olá, <?= auth()->nome ?>
+                                <!-- Avatar com iniciais -->
+                                <div class="w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-bold shadow-sm" style="background-color: <?= $cor ?>;">
+                                    <?= $iniciais ?>
+                                </div>
+                                Olá, <?= $usuarioNome ?>
                             </a>
                         </li>
                         <li>
@@ -90,6 +105,7 @@
                                 <i class="ph-light ph-sign-out"></i>
                             </a>
                         </li>
+
                     <?php endif ?>
                 </ul>
             </nav>
